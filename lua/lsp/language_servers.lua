@@ -25,6 +25,9 @@ if not configs.ls_emmet then
         'sss',
         'hbs',
         'handlebars',
+        'md',
+        'c',
+        'cpp',
       };
       root_dir = function(fname)
         return vim.loop.cwd()
@@ -38,14 +41,14 @@ end
 local langservers = {
   'html',
   'cssls',
-  'tsservers',
   'pyright',
   'ls_emmet',
-  'sumneko_lua',
+  'lua_ls',
+  'ccls',
 }
 
 for _, server in ipairs(langservers) do
-  if server == 'sumneko_lua' then
+  if server == 'lua_ls' then
     require'lspconfig'[server].setup {
       settings = {
         Lua = {
@@ -74,5 +77,12 @@ for _, server in ipairs(langservers) do
       capabilities = capabilities
     }
   end
-end
 
+  lspconfig.ccls.setup{
+    init_options = {
+      cache = {
+        directory = ".ccls-cache";
+      }
+    }
+  }
+end
