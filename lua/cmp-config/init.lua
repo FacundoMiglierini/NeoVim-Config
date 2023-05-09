@@ -1,7 +1,4 @@
 vim.g.completeopt="menu,menuone,noselect,noinsert"
--- Set up nvim-cmp.
-local cmp = require'cmp'
-
 local has_words_before = function()
   unpack = unpack or table.unpack
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -11,8 +8,8 @@ end
 local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
+local cmp = require'cmp'
 
-local lspkind = require('lspkind')
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
@@ -61,14 +58,7 @@ cmp.setup({
     -- { name = 'snippy' }, -- For snippy users.
   }, {
     { name = 'buffer' },
-  }),
-  formatting = {
-      format = lspkind.cmp_format({
-        mode = 'symbol_text', -- show only symbol annotations
-        maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
-        ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
-      })
-    }
+  })
 })
 
 -- Set configuration for specific filetype.
@@ -98,14 +88,16 @@ cmp.setup.cmdline(':', {
   })
 })
 
--- suppress error messages from lang servers
-vim.notify = function(msg, log_level, _opts)
-    if msg:match("exit code") then
-        return
-    end
-    if log_level == vim.log.levels.ERROR then
-        vim.api.nvim_err_writeln(msg)
-    else
-        vim.api.nvim_echo({{msg}}, true, {})
-    end
-end
+-- Set up lspconfig.
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+
+require'lspconfig'.pyright.setup {
+  capabilities = capabilities
+}
+require'lspconfig'.clangd.setup {
+  capabilities = capabilities
+}
+require'lspconfig'.lua_ls.setup {
+  capabilities = capabilities
+}

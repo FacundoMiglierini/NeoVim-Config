@@ -10,7 +10,9 @@ require('whichkey-config') --Keybindings 2
 require('telescope-config') --Telescope
 require('devicons-config') --Icon Pack for nvim-tree
 require('tokyo-night') --Tokyo night theme 
-require('lsp') --Autocomplete
+require('cmp-config') --Autocomplete
+require('lsp-config') --LSP
+require('mason-config') --LSP
 require('possession-config') --Sessions management
 
 --THEMES

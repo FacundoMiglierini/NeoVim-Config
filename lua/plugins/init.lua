@@ -30,6 +30,9 @@ return require('packer').startup(function(use)
   }
   use 'nvim-tree/nvim-web-devicons'
 
+
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -45,4 +48,5 @@ return require('packer').startup(function(use)
     requires = { 'nvim-lua/plenary.nvim' },
   }
   use 'gbrlsnchs/winpick.nvim'
+  use 'arkav/lualine-lsp-progress'
 end)

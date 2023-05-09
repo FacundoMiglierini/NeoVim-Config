@@ -4,6 +4,8 @@ end
 
 require('lualine').setup({
   options = { theme = 'tokyonight', },
-  sections = { lualine_a = { session_name } }
+  sections = {
+    lualine_a = { session_name,'lsp_progress'},
+  }
 })
 
