@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/facundom/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/facundom/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/facundom/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/facundom/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/facundom/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/facundom/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?.lua;/home/facundom/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?/init.lua;/home/facundom/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?.lua;/home/facundom/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/facundom/.cache/nvim/packer_hererocks/2.1.1692616192/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -104,15 +104,10 @@ _G.packer_plugins = {
     path = "/home/facundom/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  ["lspkind.nvim"] = {
+  ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/home/facundom/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
-    url = "https://github.com/onsails/lspkind.nvim"
-  },
-  ["lualine-lsp-progress"] = {
-    loaded = true,
-    path = "/home/facundom/.local/share/nvim/site/pack/packer/start/lualine-lsp-progress",
-    url = "https://github.com/arkav/lualine-lsp-progress"
+    path = "/home/facundom/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/nvimdev/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -198,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/facundom/.local/share/nvim/site/pack/packer/start/possession.nvim",
     url = "https://github.com/jedrzejboczar/possession.nvim"
+  },
+  rainbow_csv = {
+    loaded = true,
+    path = "/home/facundom/.local/share/nvim/site/pack/packer/start/rainbow_csv",
+    url = "https://github.com/mechatroner/rainbow_csv"
   },
   ["telescope.nvim"] = {
     loaded = true,

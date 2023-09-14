@@ -3,7 +3,7 @@ local function session_name()
 end
 
 require('lualine').setup({
-  options = { theme = 'tokyonight', },
+  options = { theme = 'nord', },
   sections = {
     lualine_a = { session_name,'lsp_progress'},
   }

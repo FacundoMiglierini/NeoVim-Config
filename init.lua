@@ -1,4 +1,4 @@
-require('plugins') --Plugings installation
+require('plugins') --Plugins installation
 require('keybindings') --Keybindings
 require('options') --Settings
 require('lualine-config') --Statusline
@@ -9,14 +9,15 @@ require('autopairs-config') --Autopair
 require('whichkey-config') --Keybindings 2
 require('telescope-config') --Telescope
 require('devicons-config') --Icon Pack for nvim-tree
-require('tokyo-night') --Tokyo night theme 
 require('cmp-config') --Autocomplete
-require('lsp-config') --LSP
-require('mason-config') --LSP
 require('possession-config') --Sessions management
+require('lsp-config') --LSP
+require('lspsaga-config') --LSP management
 
 --THEMES
---vim.cmd('colorscheme nord')
+require('nord-config')
+vim.cmd('colorscheme nord')
 --vim.cmd('colorscheme onedark')
 --vim.cmd('colorscheme nightfox')
-vim.cmd('colorscheme tokyonight-night')
+--require('tokyo-night') --Tokyo night theme 
+--vim.cmd('colorscheme tokyonight-night')

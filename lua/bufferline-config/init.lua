@@ -1,3 +1,8 @@
+local highlights = require("nord").bufferline.highlights({
+    italic = true,
+    bold = true,
+})
+
 require("bufferline").setup{
   options = {
     offsets = {
@@ -13,7 +18,9 @@ require("bufferline").setup{
         delay = 200,
         reveal = {'close'}
     },
+    separator_style = "slant",
     numbers = "ordinal",
+    highlights = highlights,
   }
 }
 

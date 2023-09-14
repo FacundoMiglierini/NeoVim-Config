@@ -13,7 +13,17 @@ map('n', '<leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 map('v', '<', '<gv', {noremap = true, silent = false})
 map('v', '>', '>gv', {noremap = true, silent = false})
 
+--LSPsaga
+map("n", "t", "<cmd>Lspsaga term_toggle<CR>", {noremap=true})
+map("n", "1", "<cmd>Lspsaga hover_doc<CR>", {noremap=true})
+map("n", "2", "<cmd>Lspsaga hover_doc ++keep<CR>", {noremap=true})
+map("n", "3", "<cmd>Lspsaga outline<CR>", {noremap=true})
+map("n", "4", "<cmd>Lspsaga code_action<CR>", {noremap=true})
+map("n", "gd", "<cmd>Lspsaga goto_definition<CR>", {noremap=true})
+map("n", "gtd", "<cmd>Lspsaga goto_type_definition<CR>", {noremap=true})
+map("n", "ew", "<cmd>Lspsaga diagnostic_jump_prev<CR>", {noremap=true})
+map("n", "5", "<cmd>Lspsaga finder ref<CR>", {noremap=true})
+map("n", "6", "<cmd>Lspsaga finder def<CR>", {noremap=true})
+map("n", "f", "<cmd>Lspsaga rename<CR>", {noremap=true})
 
-vim.cmd[[
-tnoremap <Esc> <C-\><C-n>
-]]
+vim.cmd[[tnoremap <Esc> <C-\><C-n>]]
