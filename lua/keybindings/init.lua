@@ -22,8 +22,12 @@ map("n", "4", "<cmd>Lspsaga code_action<CR>", {noremap=true})
 map("n", "gd", "<cmd>Lspsaga goto_definition<CR>", {noremap=true})
 map("n", "gtd", "<cmd>Lspsaga goto_type_definition<CR>", {noremap=true})
 map("n", "ew", "<cmd>Lspsaga diagnostic_jump_prev<CR>", {noremap=true})
+map("n", "er", "<cmd>Lspsaga diagnostic_jump_next<CR>", {noremap=true})
 map("n", "5", "<cmd>Lspsaga finder ref<CR>", {noremap=true})
 map("n", "6", "<cmd>Lspsaga finder def<CR>", {noremap=true})
 map("n", "f", "<cmd>Lspsaga rename<CR>", {noremap=true})
+
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 vim.cmd[[tnoremap <Esc> <C-\><C-n>]]

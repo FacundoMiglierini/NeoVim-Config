@@ -3,9 +3,10 @@ local function session_name()
 end
 
 require('lualine').setup({
-  options = { theme = 'nord', },
+  options = { 
+        theme = 'auto'
+  },
   sections = {
     lualine_a = { session_name,'lsp_progress'},
   }
 })
-

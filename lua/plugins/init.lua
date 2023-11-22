@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
     use 'ful1e5/onedark.nvim'
     use 'folke/tokyonight.nvim'
     use 'EdenEast/nightfox.nvim'
+    use 'marko-cerovac/material.nvim'
     use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
     use {
     'nvim-lualine/lualine.nvim',
