@@ -26,13 +26,10 @@ return require('packer').startup(function(use)
     use {"windwp/nvim-autopairs"}
     use {"folke/which-key.nvim"}
     use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
     }
     use 'nvim-tree/nvim-web-devicons'
-
-    -- "onsails/lspkind.nvim",
-    -- "arkav/lualine-lsp-progress",
 
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -54,4 +51,5 @@ return require('packer').startup(function(use)
         'neovim/nvim-lspconfig',
     }
     use 'nvimdev/lspsaga.nvim'
+    use 'lambdalisue/suda.vim'
 end)
