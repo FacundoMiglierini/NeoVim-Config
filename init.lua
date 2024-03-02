@@ -13,6 +13,7 @@ require('cmp-config') --Autocomplete
 require('possession-config') --Sessions management
 require('lsp-config') --LSP
 require('lspsaga-config') --LSP management
+require('trouble-config') --Diagnostic Errors
 
 --THEMES
 require('nord-config')

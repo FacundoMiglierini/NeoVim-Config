@@ -52,4 +52,6 @@ return require('packer').startup(function(use)
     }
     use 'nvimdev/lspsaga.nvim'
     use 'lambdalisue/suda.vim'
+    use 'onsails/lspkind-nvim'
+    use 'folke/trouble.nvim'
 end)

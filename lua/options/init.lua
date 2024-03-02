@@ -33,3 +33,4 @@ vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
 vim.cmd('autocmd VimEnter * NvimTreeToggle')
+vim.diagnostic.config({virtual_text = false})

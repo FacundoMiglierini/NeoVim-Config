@@ -9,8 +9,12 @@ local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 local cmp = require'cmp'
+local lspkind = require("lspkind")
 
 cmp.setup({
+  formatting = {
+    format = lspkind.cmp_format({with_text = true, maxwidth = 50})
+  },
   snippet = {
     -- REQUIRED - you must specify a snippet engine
     expand = function(args)
@@ -87,6 +91,7 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
+
 
 -- Set up lspconfig.
 --local capabilities = require('cmp_nvim_lsp').default_capabilities()
