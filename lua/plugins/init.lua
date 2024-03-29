@@ -54,4 +54,5 @@ return require('packer').startup(function(use)
     use 'lambdalisue/suda.vim'
     use 'onsails/lspkind-nvim'
     use 'folke/trouble.nvim'
+    use 'tzachar/local-highlight.nvim'
 end)

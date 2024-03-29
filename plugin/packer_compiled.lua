@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/facundom/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["local-highlight.nvim"] = {
+    loaded = true,
+    path = "/home/facundom/.local/share/nvim/site/pack/packer/start/local-highlight.nvim",
+    url = "https://github.com/tzachar/local-highlight.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/facundom/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
