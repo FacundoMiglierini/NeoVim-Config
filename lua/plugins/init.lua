@@ -55,4 +55,6 @@ return require('packer').startup(function(use)
     use 'onsails/lspkind-nvim'
     use 'folke/trouble.nvim'
     use 'tzachar/local-highlight.nvim'
+    use 'nmac427/guess-indent.nvim'
+    use 'norcalli/nvim-colorizer.lua'
 end)
