@@ -25,7 +25,6 @@ vim.wo.relativenumber = true
 vim.o.cursorline = true
 vim.wo.signcolumn = "yes"
 vim.bo.tabstop = 4
-vim.o.softttabstop = 4
 vim.o.shiftwidth = 4
 vim.bo.shiftwidth = 4
 vim.o.autoindent = true

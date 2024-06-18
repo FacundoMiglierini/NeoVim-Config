@@ -1,60 +1,66 @@
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
-    use 'shaunsingh/nord.nvim'
-    use 'ful1e5/onedark.nvim'
-    use 'folke/tokyonight.nvim'
-    use 'EdenEast/nightfox.nvim'
-    use 'marko-cerovac/material.nvim'
-    use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
-    use {
+vim.g.mapleader = ' '
+
+local plugins = {
+     'shaunsingh/nord.nvim',
+     'ful1e5/onedark.nvim',
+     'folke/tokyonight.nvim',
+     'EdenEast/nightfox.nvim',
+     'marko-cerovac/material.nvim',
+     {'nvim-treesitter/nvim-treesitter', build = ":TSUpdate"},
+     {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
-    use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
     },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
-    use {'windwp/nvim-ts-autotag'}
-    use {'p00f/nvim-ts-rainbow'}
-    use {"windwp/nvim-autopairs"}
-    use {"folke/which-key.nvim"}
-    use {
+    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+    {'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons'}, version = "nightly"},
+    {'windwp/nvim-ts-autotag'},
+    {'p00f/nvim-ts-rainbow'},
+    {'windwp/nvim-autopairs'},
+    {'folke/which-key.nvim'},
+    {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-    }
-    use 'nvim-tree/nvim-web-devicons'
-
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-vsnip'
-    use 'hrsh7th/vim-vsnip'
-    use 'skywind3000/vim-terminal-help'
-    use {
+    dependencies = { {'nvim-lua/plenary.nvim'} },
+    },
+     'nvim-tree/nvim-web-devicons',
+     'hrsh7th/cmp-nvim-lsp',
+     'hrsh7th/cmp-buffer',
+     'hrsh7th/cmp-path',
+     'hrsh7th/cmp-cmdline',
+     'hrsh7th/nvim-cmp',
+     'hrsh7th/cmp-vsnip',
+     'hrsh7th/vim-vsnip',
+     'skywind3000/vim-terminal-help',
+    {
     'jedrzejboczar/possession.nvim',
-    requires = { 'nvim-lua/plenary.nvim' },
-    }
-    use 'gbrlsnchs/winpick.nvim'
-    use 'mechatroner/rainbow_csv'
-    use {
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    },
+     'gbrlsnchs/winpick.nvim',
+     'mechatroner/rainbow_csv',
+    {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig',
-    }
-    use 'nvimdev/lspsaga.nvim'
-    use 'lambdalisue/suda.vim'
-    use 'onsails/lspkind-nvim'
-    use 'folke/trouble.nvim'
-    use 'tzachar/local-highlight.nvim'
-    use 'nmac427/guess-indent.nvim'
-    use 'norcalli/nvim-colorizer.lua'
-end)
+    },
+     'nvimdev/lspsaga.nvim',
+     'lambdalisue/suda.vim',
+     'onsails/lspkind-nvim',
+     'folke/trouble.nvim',
+     'tzachar/local-highlight.nvim',
+     'nmac427/guess-indent.nvim',
+     'norcalli/nvim-colorizer.lua',
+}
+
+require("lazy").setup(plugins, {})

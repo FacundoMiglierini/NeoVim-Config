@@ -49,4 +49,4 @@ require('telescope').setup {
   }
 }
 
-require('telescope').load_extension('possession')
+--require('telescope').load_extension('possession')

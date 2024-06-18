@@ -6,7 +6,7 @@ require('lualine').setup({
   options = { 
         theme = 'auto'
   },
-  sections = {
-    lualine_a = { session_name,'lsp_progress'},
-  }
+  --sections = {
+  --  lualine_a = { session_name,'lsp_progress'},
+  --}
 })
