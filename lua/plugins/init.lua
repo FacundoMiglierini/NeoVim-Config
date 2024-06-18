@@ -57,7 +57,6 @@ local plugins = {
      'nvimdev/lspsaga.nvim',
      'lambdalisue/suda.vim',
      'onsails/lspkind-nvim',
-     'folke/trouble.nvim',
      'tzachar/local-highlight.nvim',
      'nmac427/guess-indent.nvim',
      'norcalli/nvim-colorizer.lua',

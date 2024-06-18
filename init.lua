@@ -13,7 +13,6 @@ require('cmp-config') --Autocomplete
 require('possession-config') --Sessions management
 require('lsp-config') --LSP
 require('lspsaga-config') --LSP management
-require('trouble-config') --Diagnostic Errors
 require('local-highlight-config') --Highlight word under cursor
 require('guess-indent-config') --Automatic indentation 
 require('nvim-colorizer-config') --Colorizer for Hexa strings
