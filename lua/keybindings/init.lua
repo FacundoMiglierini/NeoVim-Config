@@ -21,7 +21,5 @@ map("n", "ew", "<cmd>Lspsaga diagnostic_jump_prev<CR>", {noremap=true})
 map("n", "er", "<cmd>Lspsaga diagnostic_jump_next<CR>", {noremap=true})
 map("n", "f", "<cmd>Lspsaga rename<CR>", {noremap=true})
 
---Trouble
-map("n", "e", "<cmd>TroubleToggle<CR>", {noremap=true})
 
 vim.cmd[[tnoremap <Esc> <C-\><C-n>]]

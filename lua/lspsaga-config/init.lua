@@ -7,6 +7,6 @@ require('lspsaga').setup({
         virtual_text = false
     },
     ui = {
-        code_action = "",
+        code_action = "💡",
     }
 })

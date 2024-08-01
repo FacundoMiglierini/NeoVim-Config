@@ -18,12 +18,10 @@ require('guess-indent-config') --Automatic indentation
 require('nvim-colorizer-config') --Colorizer for Hexa strings
 
 --THEMES
-require('nord-config')
-vim.cmd('colorscheme nord')
+--require('nord-config')
+--vim.cmd('colorscheme nord')
 --vim.cmd('colorscheme onedark')
---vim.cmd('colorscheme nightfox')
---require('tokyo-night') --Tokyo night theme 
+vim.cmd('colorscheme nightfox')
+require('tokyo-night') --Tokyo night theme 
 --vim.cmd('colorscheme tokyonight-night')
---require('material-config')
---vim.cmd 'colorscheme material'
 --vim.g.material_style = "palenight"
