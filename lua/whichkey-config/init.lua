@@ -29,4 +29,6 @@ wk.add({
     { "<leader>t", ":BufferLineGoToBuffer ", desc = "Open Tab By Number" },
     { "<leader>w", ":w<cr>", desc = "Save" },
     { "<leader>x", ":bdelete<cr>", desc = "Close" },
+    { "m", ":MarkdownPreview<cr>", desc = "Close" },
+    { "ms", ":MarkdownPreviewStop<cr>", desc = "Close" },
 })

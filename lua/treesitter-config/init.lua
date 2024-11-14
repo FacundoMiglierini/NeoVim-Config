@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "python", "c", "lua", "cpp", "java", "javascript", "html", "markdown", "markdown_inline", "bash"},
+  ensure_installed = { "python", "c", "lua", "cpp", "java", "javascript", "html", "css", "markdown", "markdown_inline", "bash"},
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -37,4 +37,12 @@ vim.diagnostic.config({
         severity_limit = 'Warning',
     },
     update_in_insert = true,
+})
+
+vim.filetype.add({
+    extension = {
+        zshrc = "sh",
+        rc = "sh",
+        mjs = "js",
+    },
 })
