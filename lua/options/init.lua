@@ -1,4 +1,8 @@
 vim.cmd('filetype plugin indent on')
+vim.o.wrap = true
+vim.o.linebreak = true
+vim.o.textwidth = 0
+vim.o.wrapmargin = 0
 vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.hidden = true
 vim.o.whichwrap = 'b,s,<,>,[,],h,l'
@@ -20,7 +24,7 @@ vim.o.ignorecase = true
 vim.o.scrolloff = 3
 vim.o.sidescrolloff = 5
 vim.o.mouse = "a"
-vim.wo.wrap = false
+--vim.wo.wrap = false
 vim.wo.relativenumber = true
 vim.o.cursorline = true
 vim.wo.signcolumn = "yes"

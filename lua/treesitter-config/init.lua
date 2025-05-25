@@ -44,5 +44,6 @@ vim.filetype.add({
         zshrc = "sh",
         rc = "sh",
         mjs = "js",
+        mdx = "markdown",
     },
 })
