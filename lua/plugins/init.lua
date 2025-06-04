@@ -14,15 +14,15 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
 local plugins = {
-     'shaunsingh/nord.nvim',
-     'ful1e5/onedark.nvim',
-     'folke/tokyonight.nvim',
-     'EdenEast/nightfox.nvim',
-     'marko-cerovac/material.nvim',
-     {'nvim-treesitter/nvim-treesitter', build = ":TSUpdate"},
-     {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
+    'shaunsingh/nord.nvim',
+    'ful1e5/onedark.nvim',
+    'folke/tokyonight.nvim',
+    'EdenEast/nightfox.nvim',
+    'marko-cerovac/material.nvim',
+    {'nvim-treesitter/nvim-treesitter', build = ":TSUpdate"},
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
     },
     {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
     {'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons'}, version = "nightly"},
