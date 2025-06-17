@@ -26,8 +26,8 @@ local plugins = {
     },
     {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
     {'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons'}, version = "nightly"},
+    {'HiPhish/rainbow-delimiters.nvim'},
     {'windwp/nvim-ts-autotag'},
-    {'p00f/nvim-ts-rainbow'},
     {'windwp/nvim-autopairs'},
     {'folke/which-key.nvim'},
     {
